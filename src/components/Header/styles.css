@@ -1,0 +1,33 @@
+nav {
+  background: rgb(200, 235, 255);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav h1 {
+  color: rgb(45, 131, 180);
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  border: 1px solid rgb(45, 131, 180);
+  padding: 10px;
+  background: rgb(45, 131, 180);
+  color: white;
+  margin-right: 25px;
+  outline: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: rgb(45, 131, 180);
+  background: transparent;
+}
