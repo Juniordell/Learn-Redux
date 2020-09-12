@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import { Container } from './styles';
+import axios from 'axios' 
 
 const Sidebar: React.FC = () => {
   return (
