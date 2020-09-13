@@ -1,8 +1,10 @@
-import React from 'react'
-
-import axios from 'axios' 
+import React, { useEffect } from 'react'
 
 const Sidebar: React.FC = () => {
+
+  useEffect(() => {
+
+  }, [])
   return (
     <aside
       style={{

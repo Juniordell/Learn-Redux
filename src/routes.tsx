@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Header from './components/Header'
 import About from './pages/About'
-import Payment from './pages/Payment'
+import Verify from './pages/Verify'
 
 const Routes: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Routes: React.FC = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
-        <Route path='/payment' component={Payment} />
+        <Route path='/verify' component={Verify} />
       </Switch>
     </Router>
   )
