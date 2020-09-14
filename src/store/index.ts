@@ -1,9 +1,9 @@
 import { createStore, combineReducers } from 'redux'
-import people from './module/people'
+import dogs from './module/dogs'
 import add from './module/add'
 
 const allReducers = combineReducers({
-  people,
+  dogs,
   add,
 })
 

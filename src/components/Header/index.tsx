@@ -13,11 +13,11 @@ function Header() {
         <Link to='/about' className='btn'>
           About
         </Link>
-        <Link to='/' className='btn'>
-          Contact
+        <Link to='/animes' className='btn'>
+          Animes
         </Link>
-        <Link to='/payment' className='btn'>
-          Payment
+        <Link to='/dogs' className='btn'>
+          Dogs
         </Link>
       </div>
     </nav>
