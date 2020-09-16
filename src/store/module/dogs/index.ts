@@ -1,11 +1,11 @@
-import api from '../../../api'
+import { dogsApi } from '../../../services/apis'
 
 let randomDog: object
 let allDogs: object
 ;(async () => {
-  randomDog = await api.get('image/random')
+  randomDog = await dogsApi.get('image/random')
 
-  allDogs = await api.get('list/all')
+  allDogs = await dogsApi.get('list/all')
 })()
 
 const dogs = () => {
