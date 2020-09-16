@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  height: 70vh;
+  justify-content: space-between;
+  height: calc(100vh - 123px);
   width: 100%;
 }
 
@@ -12,22 +13,50 @@
   justify-content: center;
 }
 
+.content h1 {
+  color: rgb(22, 63, 56);
+  margin-bottom: 30px;
+}
+
 .content input {
   border: none;
-  border-bottom: 1px solid;
   outline: none;
-  position: absolute;
-  top: 200px;
+  margin-top: 30px;
+  padding: 11px 15px;
+  background: white;
+  border-bottom: 1px solid rgb(56, 194, 171);
+  color: rgb(22, 63, 56);
+  font-size: 16px;
+}
+
+.content input::placeholder {
+  color: rgb(56, 194, 171);
 }
 
 .fun-btn {
-  padding: 10px 15px;
+  padding: 8px 12px;
   border-radius: 8px;
-  border: none;
-  background: rgb(22, 197, 60);
-  color: white;
+  background: white;
+  border: 3px solid rgb(56, 194, 171);
+  color: rgb(56, 194, 171);
   margin: 15px 20px;
   cursor: pointer;
   outline: none;
-  font-size: 18px;
+  font-size: 17px;
+}
+
+.fun-btn:hover {
+  animation: changeBg 1s infinite alternate;
+}
+
+@keyframes changeBg {
+  0% {
+    background: white;
+    color: rgb(56, 194, 171);
+  }
+
+  100% {
+    background: rgb(56, 194, 171);
+    color: white;
+  }
 }

@@ -18,14 +18,14 @@ const buttonVariants = {
 const Main = ({ add, dispatch }) => {
   const [number, setNumber] = useState(0)
 
-  function addAction(module, lesson) {
+  function addAction() {
     return {
       type: 'ADD',
       payload: number,
     }
   }
 
-  function takeAction(module, lesson) {
+  function takeAction() {
     return {
       type: 'TAKE',
       payload: number,
@@ -35,18 +35,13 @@ const Main = ({ add, dispatch }) => {
   return (
     <div className='container'>
       <div className='content'>
-        <input
-          type='number'
-          placeholder='number'
-          onChange={(e) => setNumber(e.target.value)}
-        />
         <h1>{add.value}</h1>
         <div>
           <motion.button
             variants={buttonVariants}
             whileHover='hover'
             className='fun-btn'
-            onClick={() => dispatch(addAction(add, addAction))}
+            onClick={() => dispatch(addAction())}
           >
             Add
           </motion.button>
@@ -54,11 +49,17 @@ const Main = ({ add, dispatch }) => {
             variants={buttonVariants}
             whileHover='hover'
             className='fun-btn'
-            onClick={() => dispatch(takeAction(add, takeAction))}
+            onClick={() => dispatch(takeAction())}
           >
             Take
           </motion.button>
         </div>
+
+        <input
+          type='number'
+          placeholder='number'
+          onChange={(e) => setNumber(e.target.value)}
+        />
       </div>
       <Sidebar />
     </div>
