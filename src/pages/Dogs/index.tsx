@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react'
 
 import { dogsApi } from '../../services/apis'
 
-import Loader from 'react-loader-spinner'
+import Lottie from 'react-lottie'
+
+import doguinho from '../../assets/doguinho.json'
+
+// import Loader from 'react-loader-spinner'
 
 import './styles.css'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
@@ -23,8 +27,19 @@ const Dogs: React.FC = () => {
 
   async function handleRandom() {
     setLoading(0)
+
     setRandomDog(await dogsApi.get('/image/random'))
+
     setLoading(1)
+  }
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: doguinho,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
   }
 
   return (
@@ -34,13 +49,16 @@ const Dogs: React.FC = () => {
         {randomDog.data && loading === 1 ? (
           <img src={randomDog.data.message} alt='' />
         ) : (
-          <Loader
-            type='Puff'
-            color='#00BFFF'
-            height={100}
-            width={100}
-            timeout={3000}
-          />
+          <div style={{ paddingBottom: 40 }}>
+            <Lottie options={defaultOptions} height={150} width={300} />
+          </div>
+          // <Loader
+          //   type='Puff'
+          //   color='#00BFFF'
+          //   height={100}
+          //   width={100}
+          //   timeout={3000}
+          // />
         )}
 
         <button onClick={handleRandom}>Random</button>
