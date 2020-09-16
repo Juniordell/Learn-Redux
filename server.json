@@ -1,0 +1,54 @@
+{
+  "animes": [
+    {
+      "id": 1,
+      "name": "Naruto",
+      "image": "https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "One Piece",
+      "image": "https://cabanadoleitor.com.br/wp-content/uploads/2020/05/One-Piece-Games-560x600.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Death Note",
+      "image": "https://vignette.wikia.nocookie.net/deathnote/images/7/76/DEATH_NOTE_anime.jpg/revision/latest/top-crop/width/360/height/450?cb=20170720215429"
+    },
+    {
+      "id": 4,
+      "name": "Dragon Ball",
+      "image": "https://img.elo7.com.br/product/zoom/20638B4/kit-festa-dragon-ball-z-latinhas.jpg"
+    },
+    {
+      "id": 5,
+      "name": "One Punch Man",
+      "image": "https://img.elo7.com.br/product/zoom/1EE247E/big-poster-do-anime-one-punch-man-tamanho-90x-0-cm-lo009-decoracao-geek.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Jojo",
+      "image": "https://m.media-amazon.com/images/I/51xZWSiXeqL.jpg"
+    },
+    {
+      "id": 7,
+      "name": "The Promised Neverland",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTYwYjYyZDgtMTQ3My00YTI4LThmZTUtZmU1MjllOWRlOTdhXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Boku no Hero",
+      "image": "https://cabanadoleitor.com.br/wp-content/uploads/2018/08/boku-no-hero1-1-560x600.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Nanatsu no Taizai",
+      "image": "https://i1.wp.com/www.otakupt.com/wp-content/uploads/2019/04/Nanatsu-no-Taizai-3-em-Outubro-de-2019-por-novo-est%C3%BAdio-1.jpg?resize=640%2C906&ssl=1"
+    },
+    {
+      "id": 10,
+      "name": "Shingeki no Kyojin",
+      "image": "https://cdn.myanimelist.net/images/anime/4/84177.jpg"
+    }
+  ]
+}
