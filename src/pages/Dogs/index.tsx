@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import api from '../../api'
+import { dogsApi } from '../../services/apis'
 
 import Loader from 'react-loader-spinner'
 
@@ -13,7 +13,9 @@ const Dogs: React.FC = () => {
 
   useEffect(() => {
     ;(async () => {
-      const dogList = await api.get('/image/random')
+      const dogList = await dogsApi.get('/image/random')
+      console.log(dogList)
+
       setLoading(1)
       setRandomDog(dogList)
     })()
@@ -21,26 +23,28 @@ const Dogs: React.FC = () => {
 
   async function handleRandom() {
     setLoading(0)
-    setRandomDog(await api.get('/image/random'))
+    setRandomDog(await dogsApi.get('/image/random'))
     setLoading(1)
   }
 
   return (
     <div className='dogs_container'>
-      <h1 style={{ position: 'fixed', top: 170 }}>What dog should i choose?</h1>
-      {randomDog.data && loading === 1 ? (
-        <img src={randomDog.data.message} alt='' />
-      ) : (
-        <Loader
-          type='Puff'
-          color='#00BFFF'
-          height={100}
-          width={100}
-          timeout={3000}
-        />
-      )}
+      <h1>What dog should i choose?</h1>
+      <div className='dogs_content'>
+        {randomDog.data && loading === 1 ? (
+          <img src={randomDog.data.message} alt='' />
+        ) : (
+          <Loader
+            type='Puff'
+            color='#00BFFF'
+            height={100}
+            width={100}
+            timeout={3000}
+          />
+        )}
 
-      <button onClick={handleRandom}>Random</button>
+        <button onClick={handleRandom}>Random</button>
+      </div>
     </div>
   )
 }
